@@ -1,0 +1,81 @@
+body {
+  z-index: 4;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Noto Serif JP', serif;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(
+    139deg,
+    #76f7f6 0%,
+    #dc82d4 48%,
+    #fdcb79 100%
+  );
+}
+
+h1 {
+  font-size: 35px;
+  letter-spacing: 0.3em;
+  color: #202122;
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+/* フォーム全体 */
+.form_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  flex-direction: column;
+}
+.form_wrap {
+  margin: 20px;
+  background-color: aliceblue;
+  padding: 40px 60px;
+  width: 250px;
+  box-shadow: 0 0 8px gray;
+}
+legend {
+  font-size: 25px;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+input {
+  margin: 10px;
+  border: none;
+  height: 40px;
+  width: 100%;
+  max-width: 200px;
+  letter-spacing: 1px;
+}
+
+input[type='submit'] {
+  cursor: pointer;
+  background-color: #7f00ff;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+input[type='submit']:hover {
+  color: #7f00ff;
+  background-color: rgb(155, 149, 149);
+}
+
+footer {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+/* signUP関連 はじまり*/
+.text-error {
+  color: red;
+  font-weight: bold;
+  font-size: 0.5rem;
+  right: 0;
+}
+/* signUP関連 おわり*/
