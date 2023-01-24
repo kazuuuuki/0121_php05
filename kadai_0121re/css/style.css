@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Serif JP', serif;
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  /* background-position: center; */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* フォームラッパー */
+.form_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0 2rem;
+}
+
+/* フォーム全体 */
+.form {
+  border-radius: 50%; /*角丸*/
+  text-align: center;
+  width: 500px;
+  height: 500px;
+  padding: 50px;
+  opacity: 0.9;
+
+  background-blend-mode: hue, color, overlay, screen;
+  background: radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(ellipse at 80% 5%, #aaa5b8 0%, rgb(255 40 184 / 0%) 30%),
+    radial-gradient(
+      ellipse at bottom left,
+      #9addf8 0%,
+      rgb(98 190 255 / 31%) 60%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(18, 46, 119, 0) 0%,
+      rgba(18, 46, 119, 0) 75%,
+      #787a83 100%
+    ),
+    linear-gradient(82deg, #dff7ff 0%, #f6c4ec 27%, #ebfad7 74%, #f5c1c1 100%);
+}
+
+/* 徒然映画記のタイトル部分 */
+.main_title {
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0px 10px 0px;
+  font-size: 2.7em;
+  letter-spacing: 0.3em;
+  color: #202122;
+}
+
+/* input全体 */
+input {
+  border: none;
+  height: 40px;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  opacity: 1;
+}
+
+textarea {
+  border: none;
+  padding: 10px;
+  opacity: 1;
+  max-width: 300px;
+}
+
+/* select全体 */
+select {
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+  border: none;
+  padding: 10px;
+  opacity: 1;
+}
+
+/* 各入力欄まとめ */
+.content {
+  margin: 10px;
+  font-size: 25px;
+  opacity: 1;
+}
+
+.data_text {
+  margin-top: 5px;
+  font-size: 10px;
+}
+.img_text {
+  margin-top: 3px;
+}
+.img_all {
+  margin-top: 0.8rem;
+}
+.img {
+  display: none;
+}
+.img_label {
+  font-size: 0.7rem;
+}
+.sent {
+  width: 140px;
+  height: 40px;
+  border: 5em;
+  cursor: pointer;
+  background: rgb(44, 42, 42);
+  color: aliceblue;
+  outline: none;
+  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+}
+
+.conf {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  transition: all 0.3s;
+  width: fit-content;
+  border-bottom: solid 3px #ee39d9;
+}
+
+.conf:hover {
+  color: #fff;
+  background-color: #ee39d9;
+}
+
+.sent:hover {
+  opacity: 0.6;
+}
+
+/* /////////////////
+read.php
+/////////////////// */
+
+.write_wrapper {
+  display: flex;
+  width: 100vh;
+  flex-wrap: wrap;
+  margin: auto;
+  /* background-color: white; */
+}
+
+.write {
+  /* background-color: rgb(243, 227, 227); */
+  opacity: 0.9;
+  margin: 10px;
+  padding: 10px;
+  border: #202122;
+  width: 300px;
+}
+
+.main_wrapper {
+  background-color: #fff;
+  opacity: 0.7;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.read_title {
+  padding-bottom: -30px;
+}
+
+.entry {
+  /* position: absolute; */
+  /* right: 50%; */
+  /* top: 85px; */
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: transform 0.6s ease; /* ゆっくり変化させる */
+  /* padding-top: 15px; */
+}
+
+a {
+  color: rgb(79, 72, 72);
+}
+
+.entry:hover {
+  color: white;
+  transform: scale(1.1); /* 拡大 */
+  background-color: #743565;
+}
+
+.write_area {
+  max-width: 400px;
+  margin: 10px;
+  /* background-color: #202122; */
+}
+
+.write_data {
+  margin: 5px;
+}
+
+.ac {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ac-parent {
+  font-size: 1.4rem;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #6b90ff;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.ac-child {
+  padding: 10px 0;
+  /* background-color: #d3deff; */
+  background-blend-mode: hue, color, overlay, screen;
+  background: radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(ellipse at 80% 5%, #aaa5b8 0%, rgb(255 40 184 / 0%) 30%),
+    radial-gradient(
+      ellipse at bottom left,
+      #9addf8 0%,
+      rgb(98 190 255 / 31%) 60%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(18, 46, 119, 0) 0%,
+      rgba(18, 46, 119, 0) 75%,
+      #787a83 100%
+    ),
+    linear-gradient(82deg, #dff7ff 0%, #f6c4ec 27%, #ebfad7 74%, #f5c1c1 100%);
+  opacity: 0.8;
+}
+
+.ac-hl {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.read_img img {
+  max-width: 600px;
+}
+
+.ac-wrap {
+  margin: 10px 0;
+}
+
+.edit {
+  font-size: 10px;
+}
+
+/* /////////////////
+detail.php
+/////////////////// */
+
+.detail_img {
+  width: 300px;
+}
